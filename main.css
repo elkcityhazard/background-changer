@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  min-width: 100vw;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.btn-container {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button {
+  background: rgba(255,255,255, 0.75);
+  border: 0;
+  border-radius: 10px;
+  color: #black;
+  font-family: 'Merriweather', serif;
+  font-size: 1.25em;
+  font-weight: 900;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  mix-blend-mode: difference;
+  padding: 1em 1.5em;
+  transition-duration: 500ms;
+}
+
+button:hover,
+button:active {
+  box-shadow: 0 0 1em .25em rgba(255,255,255,.25);
+  transform: scale(1.2);
+}
+
+button:active {
+}
+
+#colorName {
+  font-family: 'Merriweather', serif;
+  transition-duration: 250ms;
+  font-size: 3em;
+  margin: 1em;
+  min-height: 100px;
+
+}
+
+
+
+.animate {
+  animation: slidein 1s;
+  min-height: 100px;
+}
+
+.loader {
+  display: block;
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  animation: spin 2s linear infinite,
+              slidein 2s;
+}
+
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes slidein {
+  from {
+  opacity: 0;}
+}
+
+@keyframes blinking-cursor {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
