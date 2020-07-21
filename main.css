@@ -12,34 +12,40 @@
 }
 
 .btn-container {
+  border: none;
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
-button {
+
+button, button:visited {
   background: rgba(255,255,255, 0.75);
-  border: 0;
-  border-radius: 10px;
+  border: none;
+  border-radius: 50%;
   color: #black;
   font-family: 'Merriweather', serif;
-  font-size: 1.25em;
+  font-size: 1em;
   font-weight: 900;
+  height:200px;
   line-height: 1.5;
   margin-bottom: 40px;
   mix-blend-mode: difference;
-  padding: 1em 1.5em;
+  padding: 3em;
+  text-align: center;
   transition-duration: 500ms;
+  width: 200px;
 }
 
 button:hover,
 button:active {
-  box-shadow: 0 0 1em .25em rgba(255,255,255,.25);
-  transform: scale(1.2);
+  box-shadow: 0 0 5em 1em rgba(252, 92, 101,.7);
+  transform: scale(1.1);
 }
 
-button:active {
+button:focus {
+  outline: none;
 }
 
 #colorName {
@@ -54,30 +60,12 @@ button:active {
 
 
 .animate {
-  animation: slidein 1s;
+  animation: fadeIn 1s;
   min-height: 100px;
 }
 
-.loader {
-  display: block;
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #3498db; /* Blue */
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  animation: spin 2s linear infinite,
-              slidein 2s;
-}
 
-
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-@keyframes slidein {
+@keyframes fadeIn {
   from {
   opacity: 0;}
 }

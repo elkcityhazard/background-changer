@@ -4,8 +4,6 @@ const wrapper = document.querySelector('.wrapper');
 const hex = [1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f'];
 let bgColor = '';
 let list = [];
-let loader = document.querySelector('.loader');
-
 
 function randomColor() {
   for (let i = 0; i < 6; i++) {
@@ -21,12 +19,9 @@ function getName(bgcolor, loader) {
 
   xhr.onprogress = function () {
     console.log('READYSTATE', this.readyState);
-    loader.classList.toggle('loader');
-
   }
 
   xhr.onload = function() {
-    console.log(this.status);
     const response = JSON.parse(this.responseText);
     list.push(response.name.value.split(''));
     setTimeout(() => {
